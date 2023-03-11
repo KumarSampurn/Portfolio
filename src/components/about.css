@@ -1,0 +1,13 @@
+#about {
+    background-color: #0D0D0D;
+    background-image: linear-gradient(to right, #0D0D0D, #1A1A1A);
+  }
+  
+  #about h2 {
+    color: #FFFFFF;
+  }
+  
+  #about p {
+    color: #CCCCCC;
+  }
+  
