@@ -3,28 +3,27 @@ import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-scroll';
+
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full z-50 flex flex-col justify-center items-center h-screen bg-black text-white font-montserrat">
-      <ParticlesBg type="lines" numq={100} bg={true} />
+    <header className="absolute top-0 w-full z-50 flex flex-col justify-center items-center h-screen bg-black text-white font-montserrat">
+      <ParticlesBg type="tadpole" numq={100} bg={true} />
 
-      <nav className="flex items-center justify-between flex-wrap py-6 px-6" style={{ position: 'fixed', top: 0, left: 0, right: 0 }}>
-        <div className="flex items-center flex-shrink-0 text-white mr-6 text-left">
+      <nav className="flex items-center justify-between flex-wrap py-6 px-6 z-10 fixed top-0 left-0 right-0">
+        <div className="flex items-center flex-shrink-0 text-white -mr-9 text-left">
           <a href="/" className="font-semibold text-xl tracking-tight">
-            Your Logo
+            Sampurn
           </a>
         </div>
 
-        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto justify-center">
+        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto justify-center mr-6 ">
           <div className="text-sm lg:flex-grow flex justify-center">
             <a href="#about" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-800 mr-4">
               About
             </a>
-            <a href="#resume" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-800 mr-4">
-              Resume
-            </a>
-            <a href="#portfolio" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-800 mr-4">
+            <a href="#projects" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-800 mr-4">
               Projects
             </a>
             <a href="#contact" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-800">
@@ -50,12 +49,12 @@ const Header = () => {
         </div>
       </div>
 
-    
-<p className="scrolldown icon-container absolute bottom-0 mb-8">
-  <a className="smoothscroll" href="#about">
-    <FontAwesomeIcon icon={faCircleArrowDown} size="2x" className="text-white animate-bounce hover:animate-none hover:shadow-lg rounded-full hover:bg-gradient-to-r bg-gradient" />
-  </a>
-</p>
+      <p className="scrolldown icon-container absolute bottom-0 mb-8">
+        <Link to="about" smooth={true} duration={500}>
+          <FontAwesomeIcon icon={faCircleArrowDown} size="2x" className="text-white animate-bounce hover:animate-none hover:shadow-lg rounded-full hover:bg-gradient-to-r bg-gradient" />
+        </Link>
+
+      </p>
 
 
     </header>
