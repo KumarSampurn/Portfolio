@@ -11,3 +11,15 @@
     color: #CCCCCC;
   }
   
+
+
+  .parent {
+    display: flex;
+  }
+  .profilePic {
+    width: 25%;
+    
+  }
+  .bio {
+    flex-grow: 1;
+  }

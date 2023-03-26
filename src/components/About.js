@@ -1,26 +1,23 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
-import Jump from "react-reveal/Jump";
-import './about.css';
+import Bio from "./Bio";
+import Education from "./Education";
+import Skills from "./Skills";
+// import Fade from "react-reveal/Fade";
+import "./about.css";
 
 const About = () => {
   return (
-    <Jump>
-      <section id="about" className="bg-gradient-to-r from-dark-1 to-dark-2 text-gray-100 py-20 min-h-screen">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center">
-            <div className="w-full md:w-6/12 px-4">
-              <Fade left>
-                <h2 className="text-4xl font-semibold">About Me</h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4">
-                  Add your about me content here
-                </p>
-              </Fade>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Jump>
+    <section
+      id="about"
+      className="bg-gradient-to-r from-dark-1 to-dark-2 text-gray-100 py-20 min-h-screen flex justify-center items-center"
+    >
+      <div className="container mx-10 ">
+        <h2 className="text-center text-4xl font-semibold mx-auto">About</h2>
+        <Bio/>
+        <Education/>
+        <Skills/>
+      </div>
+    </section>
   );
 };
 
