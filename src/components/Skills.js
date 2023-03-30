@@ -14,10 +14,10 @@ const Skills = () => {
   return (
     <>
       <div className='flex items-center justify-center mt-40'>
-        <span className='text-2xl font-semibold'>Skills</span>
+        <span className='text-2xl font-semibold'>Tools and Libraries</span>
       </div>
 
-      <div className='block w-10/12 mx-auto mt-20 h-92'>
+      <div className='block w-10/12 mx-auto mt-20 '>
         <Carousel activeIndex={index} onSelect={handleSelect} interval={6000}>
           {data.items.map((item, index) => (
             <Carousel.Item key={index}>
@@ -26,7 +26,7 @@ const Skills = () => {
               </div>
 
               <div className='p-0 m-0 w-9/11 '>
-                <div className='flex flex-wrap justify-center mb-20 '>
+                <div className='flex flex-wrap justify-center mb-20 h-80 items-center mx-15'>
                   {item.tools.map((tool, index) => (
                     <SkillItem key={index} name={tool.name} image={tool.image} />
                   ))}
